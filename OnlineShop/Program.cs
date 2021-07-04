@@ -123,12 +123,15 @@ namespace OnlineShop
                 }
                 //Cut to the second number after the dot
                 totalPrice = Convert.ToDouble(String.Format("{0:0.00}", totalPrice));
+
                 Console.WriteLine("\n_____________________________________________________");
                 Console.Write("\nDo you want to use current discount code (Y/N): ");
                 Console.ForegroundColor = ConsoleColor.Blue;
+
                 string discountCodeChoice = Console.ReadLine();
                 Console.ResetColor();
-                if (discountCodeChoice == "Yes" || discountCodeChoice == "yes" || discountCodeChoice == "Y" || discountCodeChoice == "y")
+
+                if (discountCodeChoice.ToLower() == "yes" || discountCodeChoice.ToLower() == "y")
                 {
                     Console.Write("\nEnter code: ");
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -179,10 +182,10 @@ namespace OnlineShop
             Bye();
 
         }
+
         private static void Bye()
         {
             Console.WriteLine("\nBYE! :) Have a nice day!");
         }
-        
     }
 }
