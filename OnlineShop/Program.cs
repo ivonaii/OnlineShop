@@ -40,14 +40,15 @@ namespace OnlineShop
                 //List for underwear
                 var underwear = new List<Clothes>()
                 {
-                    new Underwear(0, "men", "boxers", "black", "M", 15.59),
+                    new Underwear(0, "men", "boxers", "black", "M", 15.55),
                     new Underwear(1, "women", "boxers", "blue", "S", 9.99),
-                    new Underwear(2, "men", "briefs", "grey", "M", 19.99)
+                    new Underwear(2, "men", "briefs", "grey", "M", 19.25),
+                    new Underwear(3, "women", "bikini", "pink", "XS", 12.89),
+                    new Underwear(4, "men", "briefs", "black", "XL", 7.95),
+                    new Underwear(5, "women", "brazil", "purple", "S", 10.49)
                 };
 
-
                 Console.WriteLine("\n\t\tProducts in stock");
-
                 Console.WriteLine("\nUnderwear:\n");
                 Console.WriteLine("\tNumber: Gender: Type:   Color:  Size:  Price(lv):");
                 foreach (var Underwear in underwear)
@@ -66,7 +67,11 @@ namespace OnlineShop
                 var jacket = new List<Clothes>()
                 {
                     new Jackets(0, "women", "winter", "leather", "M", 75.59),
-                    new Jackets(1, "men", "autumn", "denim", "S", 45.99)
+                    new Jackets(1, "men", "autumn", "denim", "S", 45.99),
+                    new Jackets(2, "women", "autumn", "denim", "L", 65.99),
+                    new Jackets(3, "women", "summer", "polyes.", "XS", 35.95),
+                    new Jackets(4, "men", "spring", "cotton", "M", 89.75),
+                    new Jackets(5, "men", "summer", "elast.", "XL", 56.45)
                 };
 
                 Console.WriteLine("\nJackets:\n");
@@ -85,9 +90,11 @@ namespace OnlineShop
                 var top = new List<Clothes>()
                 {
                     new Top(0, "men", "t-shirt", "yes", "L", 19.99),
-                    new Top(1, "men", "shirt", "no", "L", 25.59),
+                    new Top(1, "men", "shirt", "no", "L", 25.55),
                     new Top(2, "men", "sweater", "yes", "M", 35.99),
-                    new Top(3, "women", "blouse", "no", "XS", 15.99)
+                    new Top(3, "women", "blouse", "no", "XS", 15.35),
+                    new Top(4, "women", "linen", "no", "XL", 25.79),
+                    new Top(5, "women", "knit", "yes", "S", 45.45)
                 };
 
                 Console.WriteLine("\nTops:\n");
@@ -108,9 +115,10 @@ namespace OnlineShop
                     new Pants(0, "women", "cotton", "brown", "32", 15.59),
                     new Pants(1, "men", "denim", "black", "40", 20.99),
                     new Pants(2, "women", "satin", "nude", "32", 55.95),
-                    new Pants(3, "women", "leather", "black", "29", 30.99)
+                    new Pants(3, "women", "leather", "black", "29", 30.99),
+                    new Pants(4, "men", "denim", "blue", "42", 25.49),
+                    new Pants(5, "women", "polyes.", "white", "28", 60.65)
                 };
-
 
                 Console.WriteLine("\nPants:\n");
                 Console.WriteLine("\tNumber: Gender: Fabric: Color:  Waist:  Price(lv):");
