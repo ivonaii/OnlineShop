@@ -10,8 +10,9 @@ namespace OnlineShop
         {
             Console.WriteLine("Highest quality tops in the country.");
         }
-        public Top(string gender, string type, string collar, string size, double price)
+        public Top(int index, string gender, string type, string collar, string size, double price)
         {
+            Index = index;
             Gender = gender;
             Type = type;
             Collar = collar;

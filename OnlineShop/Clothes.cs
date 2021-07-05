@@ -6,6 +6,7 @@ namespace OnlineShop
 {
     abstract class Clothes : IPrice
     {
+        public int Index { get; set; }
         public string Color { get; set; }
         public string Size { get; set; }
         public string Gender { get; set; }
@@ -16,7 +17,14 @@ namespace OnlineShop
         public string Waist { get; set; }
         public double Price { get; set; }
         public string Country { get; set; }
+        public virtual string Clothing { get; set; }
 
         public abstract void PrintInfo();
+
+        public virtual void PrintCopyright()
+        {
+            Console.WriteLine("Copyright © 2021 Iviko");
+        }
+
     }
 }

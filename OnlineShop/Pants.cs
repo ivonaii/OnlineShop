@@ -11,8 +11,9 @@ namespace OnlineShop
             Console.WriteLine("P-riceless. A-wesome. N-ew. T-rendy. S-leek. = PANTS");
 
         }
-        public Pants(string gender, string fabric, string color, string waist, double price)
+        public Pants(int index, string gender, string fabric, string color, string waist, double price)
         {
+            Index = index;
             Gender = gender;
             Fabric = fabric;
             Color = color;

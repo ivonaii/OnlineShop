@@ -10,8 +10,9 @@ namespace OnlineShop
 		{
 			Console.WriteLine("\nSoftest breatheable underwear on the market.");
 		}
-		public Underwear(string gender, string type, string color, string size, double price)
+		public Underwear(int index, string gender, string type, string color, string size, double price)
 		{
+			Index = index;
 			Gender = gender;
 			Type = type;
 			Color = color;

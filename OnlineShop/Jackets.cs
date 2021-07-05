@@ -16,8 +16,9 @@ namespace OnlineShop
 			Country = country;
 			Console.WriteLine("Made in: {0}", Country);
 		}
-		public Jackets(string gender, string season, string fabric, string size, double price)
+		public Jackets(int index, string gender, string season, string fabric, string size, double price)
 		{
+			Index = index;
 			Gender = gender;
 			Season = season;
 			Fabric = fabric;
