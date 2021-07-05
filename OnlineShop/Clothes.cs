@@ -18,13 +18,6 @@ namespace OnlineShop
         public double Price { get; set; }
         public string Country { get; set; }
         public virtual string Clothing { get; set; }
-
         public abstract void PrintInfo();
-
-        public virtual void PrintCopyright()
-        {
-            Console.WriteLine("Copyright © 2021 Iviko");
-        }
-
     }
 }

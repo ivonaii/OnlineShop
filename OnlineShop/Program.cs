@@ -283,6 +283,8 @@ namespace OnlineShop
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\nThank you for visiting.");  
                 Console.ResetColor();
+                Copyright myCopyright = new Copyright();
+                myCopyright.PrintCopyright();
                 Environment.Exit(0);
             }
             Bye();
@@ -305,6 +307,8 @@ namespace OnlineShop
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("\n                     Have a nice day!");
             Console.ResetColor();
+            Copyright myCopyright = new Copyright();
+            myCopyright.PrintCopyright();
         }
     }
 }
