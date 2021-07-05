@@ -141,6 +141,7 @@ namespace OnlineShop
                     
                     Console.Write("\nEnter category: ");
                     string items = Console.ReadLine();
+                    Console.WriteLine("If you want to remove a product from your basket, please enter \"remove (category)\". ");
                     Console.WriteLine("Enter product number (type -1 when you are done with a category): ");
 
                     if (items.ToLower() == "underwear")
@@ -200,6 +201,62 @@ namespace OnlineShop
                             }
 
                             basket.Add(pants[index]);
+                        }
+                    }
+                    else if (items.ToLower() == "remove underwear")
+                    {
+                        int remove = 0;
+                        while (true)
+                        {
+                            remove = int.Parse(Console.ReadLine());
+                            if (remove < 0)
+                            {
+                                break;
+                            }
+
+                            basket.Remove(underwear[remove]);
+                        }
+                    }
+                    else if (items.ToLower() == "remove jacets")
+                    {
+                        int remove = 0;
+                        while (true)
+                        {
+                            remove = int.Parse(Console.ReadLine());
+                            if (remove < 0)
+                            {
+                                break;
+                            }
+
+                            basket.Remove(jacket[remove]);
+                        }
+                    }
+                    else if (items.ToLower() == "remove tops")
+                    {
+                        int remove = 0;
+                        while (true)
+                        {
+                            remove = int.Parse(Console.ReadLine());
+                            if (remove < 0)
+                            {
+                                break;
+                            }
+
+                            basket.Remove(top[remove]);
+                        }
+                    }
+                    else if (items.ToLower() == "remove pants")
+                    {
+                        int remove = 0;
+                        while (true)
+                        {
+                            remove = int.Parse(Console.ReadLine());
+                            if (remove < 0)
+                            {
+                                break;
+                            }
+
+                            basket.Remove(pants[remove]);
                         }
                     }
 
