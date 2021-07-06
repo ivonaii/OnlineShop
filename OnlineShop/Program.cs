@@ -144,6 +144,11 @@ namespace OnlineShop
                     Console.WriteLine("If you want to remove a product from your basket, please enter \"remove (category)\". ");
                     Console.WriteLine("Enter product number (type -1 when you are done with a category): ");
 
+                    if (items == "")
+                    {
+                        Error.ErrorFunction();
+                    }
+
                     if (items.ToLower() == "underwear")
                     {
                         int index = 0;
@@ -264,6 +269,10 @@ namespace OnlineShop
                         "\nIf you want to finish shopping enter \"End\".\n");
                     Console.Write("\nEnter command: ");
                     command = Console.ReadLine();
+                    if (command == "")
+                    {
+                        Error.ErrorFunction();
+                    }
                 }
 
                 Console.WriteLine("\nChosen items: ");
