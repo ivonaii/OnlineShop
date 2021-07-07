@@ -40,12 +40,12 @@ namespace OnlineShop
                 //List for underwear
                 var underwear = new List<Clothes>()
                 {
+                    new Underwear(0, "women", "brazil", "purple", "S", 10.49),
                     new Underwear(1, "men", "boxers", "black", "M", 15.55),
                     new Underwear(2, "women", "boxers", "blue", "S", 9.99),
                     new Underwear(3, "men", "briefs", "grey", "M", 19.25),
                     new Underwear(4, "women", "bikini", "pink", "XS", 12.89),
-                    new Underwear(5, "men", "briefs", "black", "XL", 7.95),
-                    new Underwear(6, "women", "brazil", "purple", "S", 10.49)
+                    new Underwear(5, "men", "briefs", "black", "XL", 7.95)
                 };
 
                 Console.WriteLine("\n\t\tProducts in stock");
@@ -66,12 +66,12 @@ namespace OnlineShop
                 //List for jackets
                 var jacket = new List<Clothes>()
                 {
+                    new Jackets(0, "men", "summer", "elast.", "XL", 56.45),
                     new Jackets(1, "women", "winter", "leather", "M", 75.59),
                     new Jackets(2, "men", "autumn", "denim", "S", 45.99),
                     new Jackets(3, "women", "autumn", "denim", "L", 65.99),
                     new Jackets(4, "women", "summer", "polyes.", "XS", 35.95),
-                    new Jackets(5, "men", "spring", "cotton", "M", 89.75),
-                    new Jackets(6, "men", "summer", "elast.", "XL", 56.45)
+                    new Jackets(5, "men", "spring", "cotton", "M", 89.75)
                 };
 
                 Console.WriteLine("\nJackets:\n");
@@ -89,12 +89,12 @@ namespace OnlineShop
                 //List for tops
                 var top = new List<Clothes>()
                 {
+                    new Top(0, "women", "knit", "yes", "S", 45.45),
                     new Top(1, "men", "t-shirt", "yes", "L", 19.99),
                     new Top(2, "men", "shirt", "no", "L", 25.55),
                     new Top(3, "men", "sweater", "yes", "M", 35.99),
                     new Top(4, "women", "blouse", "no", "XS", 15.35),
-                    new Top(5, "women", "linen", "no", "XL", 25.79),
-                    new Top(6, "women", "knit", "yes", "S", 45.45)
+                    new Top(5, "women", "linen", "no", "XL", 25.79)
                 };
 
                 Console.WriteLine("\nTops:\n");
@@ -112,12 +112,12 @@ namespace OnlineShop
                 //List for pants
                 var pants = new List<Clothes>()
                 {
+                    new Pants(0, "women", "polyes.", "white", "28", 60.65),
                     new Pants(1, "women", "cotton", "brown", "32", 15.59),
                     new Pants(2, "men", "denim", "black", "40", 20.99),
                     new Pants(3, "women", "satin", "nude", "32", 55.95),
                     new Pants(4, "women", "leather", "black", "29", 30.99),
-                    new Pants(5, "men", "denim", "blue", "42", 25.49),
-                    new Pants(6, "women", "polyes.", "white", "28", 60.65)
+                    new Pants(5, "men", "denim", "blue", "42", 25.49)
                 };
 
                 Console.WriteLine("\nPants:\n");
@@ -153,7 +153,7 @@ namespace OnlineShop
                     {
                         //A variable of type int preserving and summing the values of the arguments submitted to it
                         int index = 0;
-                        while (true)
+                        while (index >= 0)
                         {
                             //Fixes bugs
                             try
@@ -167,18 +167,16 @@ namespace OnlineShop
                                 index = int.Parse(Console.ReadLine());
                             }
 
-                            if (index < 0)
+                            if (index >= 0)
                             {
-                                break;
+                                basket.Add(underwear[index]);
                             }
-
-                            basket.Add(underwear[index]);
                         }
                     }
                     else if (items.ToLower() == "jackets")
                     {
                         int index = 0;
-                        while (true)
+                        while (index >= 0)
                         {
                             try
                             {
@@ -191,18 +189,16 @@ namespace OnlineShop
                                 index = int.Parse(Console.ReadLine());
                             }
 
-                            if (index < 0)
+                            if (index >= 0)
                             {
-                                break;
+                                basket.Add(jacket[index]);
                             }
-
-                            basket.Add(jacket[index]);
                         }
                     }
                     else if (items.ToLower() == "tops")
                     {
                         int index = 0;
-                        while (true)
+                        while (index >= 0)
                         {
                             try
                             {
@@ -215,18 +211,16 @@ namespace OnlineShop
                                 index = int.Parse(Console.ReadLine());
                             }
 
-                            if (index < 0)
+                            if (index >= 0)
                             {
-                                break;
+                                basket.Add(top[index]);
                             }
-
-                            basket.Add(top[index]);
                         }
                     }
                     else if (items.ToLower() == "pants")
                     {
                         int index = 0;
-                        while (true)
+                        while (index >= 0)
                         {
                             try
                             {
@@ -239,19 +233,18 @@ namespace OnlineShop
                                 index = int.Parse(Console.ReadLine());
                             }
 
-                            if (index < 0)
+                            if (index >= 0)
                             {
-                                break;
+                                basket.Add(pants[index]);
                             }
 
-                            basket.Add(pants[index]);
                         }
                     }
                     else if (items.ToLower() == "remove underwear")
                     {
                         //An int type variable that stores and substracts the values of its arguments
                         int remove = 0;
-                        while (true)
+                        while (remove >= 0)
                         {
                             try
                             {
@@ -264,18 +257,16 @@ namespace OnlineShop
                                 remove = int.Parse(Console.ReadLine());
                             }
 
-                            if (remove < 0)
+                            if (remove >= 0)
                             {
-                                break;
+                                basket.Remove(underwear[remove]);
                             }
-
-                            basket.Remove(underwear[remove]);
                         }
                     }
                     else if (items.ToLower() == "remove jacets")
                     {
                         int remove = 0;
-                        while (true)
+                        while (remove >= 0)
                         {
                             try
                             {
@@ -288,18 +279,16 @@ namespace OnlineShop
                                 remove = int.Parse(Console.ReadLine());
                             }
 
-                            if (remove < 0)
+                            if (remove >= 0)
                             {
-                                break;
+                                basket.Remove(jacket[remove]);
                             }
-
-                            basket.Remove(jacket[remove]);
                         }
                     }
                     else if (items.ToLower() == "remove tops")
                     {
                         int remove = 0;
-                        while (true)
+                        while (remove >= 0)
                         {
                             try
                             {
@@ -312,18 +301,16 @@ namespace OnlineShop
                                 remove = int.Parse(Console.ReadLine());
                             }
 
-                            if (remove < 0)
+                            if (remove >= 0)
                             {
-                                break;
+                                basket.Remove(top[remove]);
                             }
-
-                            basket.Remove(top[remove]);
                         }
                     }
                     else if (items.ToLower() == "remove pants")
                     {
                         int remove = 0;
-                        while (true)
+                        while (remove >= 0)
                         {
                             try
                             {
@@ -336,12 +323,10 @@ namespace OnlineShop
                                 remove = int.Parse(Console.ReadLine());
                             }
 
-                            if (remove < 0)
+                            if (remove >= 0)
                             {
-                                break;
+                                basket.Remove(pants[remove]);
                             }
-
-                            basket.Remove(pants[remove]);
                         }
                     }
 
