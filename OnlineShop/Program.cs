@@ -151,9 +151,11 @@ namespace OnlineShop
 
                     if (items.ToLower() == "underwear")
                     {
+                        //A variable of type int preserving and summing the values of the arguments submitted to it
                         int index = 0;
                         while (true)
                         {
+                            //Fixes bugs
                             try
                             {
                                 string line = Console.ReadLine();
@@ -247,6 +249,7 @@ namespace OnlineShop
                     }
                     else if (items.ToLower() == "remove underwear")
                     {
+                        //An int type variable that stores and substracts the values of its arguments
                         int remove = 0;
                         while (true)
                         {
