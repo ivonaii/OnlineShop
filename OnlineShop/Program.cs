@@ -334,7 +334,10 @@ namespace OnlineShop
                         "\nIf you want to finish shopping enter \"End\".\n");
                     Console.Write("\nEnter command: ");
                     command = Console.ReadLine();
-
+                    if (command == "")
+                    {
+                        Error.ErrorFunction();
+                    }
                 }
 
                 Console.WriteLine("\nChosen items: ");
