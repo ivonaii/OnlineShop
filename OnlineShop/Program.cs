@@ -335,10 +335,6 @@ namespace OnlineShop
                     Console.Write("\nEnter command: ");
                     command = Console.ReadLine();
 
-                    if (command == "")
-                    {
-                        Error.ErrorFunction();
-                    }
                 }
 
                 Console.WriteLine("\nChosen items: ");
